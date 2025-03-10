@@ -1,0 +1,32 @@
+<sdf version="1.6">
+  <model name="dc_motor_model">
+    <static>false</static>
+    <link name="base_link">
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <iyy>0.01</iyy>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box><size>0.2 0.2 0.2</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box><size>0.2 0.2 0.2</size></box>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="motor_joint" type="continuous">
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint>
+
+    <plugin name="dc_motor_plugin" filename="libdc_motor_plugin.so"/>
+  </model>
+</sdf>
