@@ -98,5 +98,5 @@ Feel free to open issues and submit pull requests to improve the plugin!
 This project is released under the **Apache 2.0 License**.
 
 ---
-### **Author:** Your Name
+### **Author:** Dhrubo Roy Partho
 
